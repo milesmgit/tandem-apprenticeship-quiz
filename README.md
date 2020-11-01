@@ -1,6 +1,7 @@
 #To run this program:
 #1) Clone the github repository online into a directory on your local machine of your choosing.
-#Example git clone pathOfDirectoryOfYourChoosing
+#Example - using terminal type mkdir nameOfYourDirectory
+#cd into that directory and type git clone https://github.com/milesmgit/tandem-apprenticeship-quiz
 
 #2) type npm install to download the required dependencies for this program.
 

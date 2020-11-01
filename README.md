@@ -4,7 +4,7 @@
 
 Example - using terminal type 'mkdir nameOfYourDirectory'
 
-# 2) cd into that directory and type <git clone https://github.com/milesmgit/tandem-apprenticeship-quiz>
+# 2) cd into that directory and type 'git clone https://github.com/milesmgit/tandem-apprenticeship-quiz'
 
 # 3) type 'git checkout master' so that you can access the project files in this branch
 

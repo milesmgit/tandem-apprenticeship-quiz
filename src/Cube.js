@@ -16,7 +16,7 @@ class Cube extends Component {
       currentAnswerChoiceRed: Question.questions[0].red,
       view: -1,
 
-      timerTime: 15,
+      timerTime: 35,
     };
 
     this.right = 0;
@@ -32,7 +32,7 @@ class Cube extends Component {
   reset() {
     this.setState({
       view: -1,
-      timerTime: 15,
+      timerTime: 35,
       colorClicked: null,
       currentQuestion: Question.questions[0],
       currentAnswerChoiceBlue: Question.questions[0].blue,
@@ -66,7 +66,7 @@ class Cube extends Component {
             currentAnswerChoiceOrange: Question.questions[this.counter].orange,
             currentAnswerChoiceYellow: Question.questions[this.counter].yellow,
             currentAnswerChoiceRed: Question.questions[this.counter].red,
-            timerTime: 15,
+            timerTime: 35,
           });
 
           this.startTimer();
@@ -106,7 +106,7 @@ class Cube extends Component {
           currentAnswerChoiceOrange: Question.questions[this.counter].orange,
           currentAnswerChoiceYellow: Question.questions[this.counter].yellow,
           currentAnswerChoiceRed: Question.questions[this.counter].red,
-          timerTime: 15,
+          timerTime: 35,
         });
       } else if (this.counter === Question.questions.length) {
         this.setState({
@@ -153,6 +153,7 @@ class Cube extends Component {
           <div id="show-active">
             <div id="start-timer">Time Remaining: {this.state.timerTime}</div>
             <div className="question">
+              <div id="answersCorrect">Correct Answers = {this.right}</div>
               <span>Question:</span>&nbsp;
               {this.state.currentQuestion.question}
             </div>

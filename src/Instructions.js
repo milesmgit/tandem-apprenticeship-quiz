@@ -8,7 +8,9 @@ const Instructions = (props) => {
         Welcome to Noobx Cube! This is a quiz game where you may win the
         director's cut of a new movie that is trending wildly. The goal of the
         game is to read the question and then click the color on the spinning
-        cube that corresponds with the correct answer. Good luck!
+        cube that corresponds with the correct answer and then click the submit
+        button to confirm your selection. Be quick because there is a timer so
+        reflexes are just as important as intellect! Good luck!
       </h3>
     </div>
   );

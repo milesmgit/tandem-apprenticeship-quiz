@@ -1,3 +1,13 @@
+#To run this program:
+#1) Clone the github repository online into a directory on your local machine of your choosing.
+#Example git clone pathOfDirectoryOfYourChoosing
+
+#2) type npm install to download the required dependencies for this program.
+
+#3) cd into the tandem_apprenticeship_quiz folder and then type npm start.
+For me, I have two folders named tandem_apprenticeship_quiz, so I cd into both...
+cd tandem_apprenticeship_quiz/tandem_apprenticeship_quiz
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

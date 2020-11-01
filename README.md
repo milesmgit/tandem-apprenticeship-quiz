@@ -1,3 +1,5 @@
+# To see working project without having to clone, download or configure anything - visit https://milesmgit.github.io/tandem-apprenticeship-quiz/
+
 # To run this program:
 
 # 1) Clone the github repository online into a directory on your local machine of your choosing.

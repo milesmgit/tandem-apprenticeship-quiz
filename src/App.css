@@ -1,38 +1,263 @@
-.App {
+body {
+  background-image: linear-gradient(to right, red, yellow);
+  font-family: "Bungee Inline", cursive;
+}
+
+nav {
+  text-align: center;
+  margin: 100px auto;
+}
+
+a {
+  padding: 20px;
+  text-shadow: 3px 3px 3px black;
+  color: white;
+  font-size: 20px;
+}
+
+a:hover {
+  color: lime;
+}
+
+#start-timer {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px black;
+  margin: 30px;
+}
+
+img {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  margin: 5px;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+#instructions,
+#trending {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px black;
+  margin: 30px;
+}
+
+#reset-game2 {
+  display: block;
+}
+
+.question {
+  font-size: 25px;
+  color: rgb(35, 233, 24);
+  font-weight: bold;
+  text-shadow: 3px 3px 3px black;
+  padding: 10px;
+}
+
+span {
+  font-size: 30px;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+}
+
+#answer {
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+}
+
+#blue-question {
+  color: rgb(134, 134, 236);
+}
+
+#red-question {
+  color: red;
+}
+
+#orange-question {
+  color: orange;
+}
+
+#yellow-question {
+  color: yellow;
+}
+
+.betterLuck {
+  text-shadow: 3px 3px 3px white;
+}
+
+div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loserDiv {
+  margin: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  box-shadow: 3px 3px 3px black;
+  margin: 50px auto;
+}
+
+.cube {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background-color: rgb(122, 119, 119);
+  border-radius: 25%;
+  box-shadow: 3px 3px 3px black;
+}
+
+/* cube sides */
+
+#blue {
+  background-color: blue;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#red {
+  background-color: red;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+/* I got the cube animation from this website:   youtube.com/watch?v=lwo8VYTsujA */
+/* I experimented with the values to make a smaller cube */
+
+/* .rotating-box {
+  width: 400px;
+  height: 400px;
+  margin: 10px 100px;
+  perspective: 800px;
+  margin-bottom: 200px;
+  
+} */
+
+.rotating-box {
+  width: 100px;
+  height: 100px;
+  margin: 10px 100px;
+  perspective: 800px;
+  margin-bottom: 50px;
+}
+
+/* .single-rb {
+  width: 400px;
+  animation: rotate 15s linear infinite;
+  transform-style: preserve-3d;
+  margin-top: 120px;
+  
+} */
+
+.single-rb {
+  width: 100px;
+  animation: rotate 15s linear infinite;
+  transform-style: preserve-3d;
+  margin-top: 50px;
+}
+
+/* .single-rb div {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  
+} */
+
+.single-rb div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+/* .front-side {
+  transform: translateZ(200px);
+  border: 5px solid black; 
+} */
+
+.front-side {
+  transform: translateZ(50px);
+  border: 5px solid black;
+}
+
+/* .back-side {
+  transform: rotateY(180deg) 
+  translateZ(200px);
+  border: 5px solid black; 
+} */
+
+.back-side {
+  transform: rotateY(180deg) translateZ(50px);
+  border: 5px solid black;
+}
+
+/* .left-side {
+  transform: rotateY(-90deg)
+  translateX(-200px);
+  transform-origin: left;
+  border: 5px solid black; 
+} */
+
+.left-side {
+  transform: rotateY(-90deg) translateX(-50px);
+  transform-origin: left;
+  border: 5px solid black;
+}
+
+/* .right-side {
+  transform: rotateY(90deg)
+  translateX(200px);
+  transform-origin: right;
+  border: 5px solid black; 
+} */
+
+.right-side {
+  transform: rotateY(90deg) translateX(50px);
+  transform-origin: right;
+  border: 5px solid black;
+}
+
+/* .top-side {
+  transform: rotateX(-90deg)
+  translateY(-200px);
+  transform-origin: top;
+  border: 5px solid black; 
+} */
+
+.top-side {
+  transform: rotateX(-90deg) translateY(-50px);
+  transform-origin: top;
+  border: 5px solid black;
+}
+
+/* .bottom-side {
+  transform: rotateX(90deg)
+  translateY(200px);
+  transform-origin: bottom;
+  border: 5px solid black; 
+} */
+
+.bottom-side {
+  transform: rotateX(90deg) translateY(50px);
+  transform-origin: bottom;
+  border: 5px solid black;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotateY(360deg);
   }
 }

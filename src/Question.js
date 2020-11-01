@@ -46,7 +46,7 @@ const Question = {
       blue: "Blue: MIT",
       red: "Red: Campbell University",
       yellow: "Yellow: University of Louisville",
-      orange: "Orange: university of Kentucky",
+      orange: "Orange: University of Kentucky",
     },
     {
       id: 6,

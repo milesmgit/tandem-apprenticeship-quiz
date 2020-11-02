@@ -18,6 +18,8 @@ For me, I have two folders named tandem_apprenticeship_quiz, so I cd into both..
 'cd tandem_apprenticeship_quiz/tandem_apprenticeship_quiz'
 Type 'npm start'
 
+# I am working on media queries at present
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

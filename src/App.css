@@ -269,7 +269,7 @@ button {
 }
 
 @media only screen and (min-width: 300px) {
-  .cube {
+  .Cube {
     position: absolute;
     height: 300px;
     width: 400px;

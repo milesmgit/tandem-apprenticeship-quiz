@@ -268,7 +268,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   .cube {
     display: inline-block;
     background-color: rgb(122, 119, 119);

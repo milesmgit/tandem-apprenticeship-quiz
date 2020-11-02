@@ -271,7 +271,7 @@ button {
 @media only screen and (min-width: 300px) {
   .Cube {
     position: absolute;
-    height: 300px;
+    height: 1300px;
     width: 400px;
     background-color: rgb(122, 119, 119);
     border-radius: 25%;

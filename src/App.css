@@ -267,3 +267,12 @@ button {
     transform: rotateY(360deg);
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .cube {
+    display: inline-block;
+    background-color: rgb(122, 119, 119);
+    border-radius: 25%;
+    box-shadow: 3px 3px 3px black;
+  }
+}

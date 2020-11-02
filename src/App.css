@@ -268,9 +268,11 @@ button {
   }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 300px) {
   .cube {
-    display: inline-block;
+    position: absolute;
+    height: 300px;
+    width: 400px;
     background-color: rgb(122, 119, 119);
     border-radius: 25%;
     box-shadow: 3px 3px 3px black;

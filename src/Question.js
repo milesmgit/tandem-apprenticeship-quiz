@@ -71,7 +71,7 @@ const Question = {
       question: "Fill in the Blanks - LGBTQ + _ + _?",
       correct: "red",
       blue: "Blue: What?",
-      red: "Red: I (Intersex); + A (Asexual) +",
+      red: "Red: I (Intersex) + A (Asexual) +",
       yellow: "Yellow: Now I know my ABC's",
       orange: "Orange: Social Empathy",
     },

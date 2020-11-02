@@ -15,3 +15,8 @@ code {
 #answer {
   padding: 20px;
 }
+
+#display {
+  color: yellow;
+  border: black 2px solid;
+}

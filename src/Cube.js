@@ -15,14 +15,12 @@ class Cube extends Component {
       currentAnswerChoiceYellow: Question.questions[0].yellow,
       currentAnswerChoiceRed: Question.questions[0].red,
       view: -1,
-
       timerTime: 35,
     };
 
     this.right = 0;
     this.counter = 0;
     this.colorClicked = null;
-
     this.myClick = this.myClick.bind(this);
     this.checkAnswer = this.checkAnswer.bind(this);
     this.startTimer = this.startTimer.bind(this);
@@ -72,7 +70,7 @@ class Cube extends Component {
           this.startTimer();
         } else if (
           this.counter === Question.questions.length - 1 &&
-          this.right !== 3
+          this.right !== 10
         ) {
           this.setState({
             timerTime: 0,
@@ -90,8 +88,17 @@ class Cube extends Component {
 
     this.colorClicked = e.target.id;
   }
+  // I am using bracket notation for this bit ${Question.questions[this.counter][renderAnswer]}
+  // so that I can access an object via a string input.
 
   checkAnswer() {
+    let renderAnswer = Question.questions[this.counter].correct;
+    const displayAnswer = document.getElementById("display");
+    displayAnswer.innerHTML = `Question ${this.counter + 1}'s answer is ${
+      Question.questions[this.counter].correct
+    } - 
+      ${Question.questions[this.counter][renderAnswer]}
+    `;
     if (this.counter < Question.questions.length) {
       this.counter += 1;
       if (this.colorClicked === this.state.currentQuestion.correct) {
@@ -154,7 +161,8 @@ class Cube extends Component {
             <div id="start-timer">Time Remaining: {this.state.timerTime}</div>
             <div className="question">
               <div id="answersCorrect">Correct Answers = {this.right}</div>
-              <span>Question:</span>&nbsp;
+              <div id="display"></div>
+              <span>Question:{this.state.currentQuestion.id}</span>&nbsp;
               {this.state.currentQuestion.question}
             </div>
             <div id="answer">

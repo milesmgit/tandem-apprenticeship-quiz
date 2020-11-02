@@ -19,4 +19,10 @@ code {
 #display {
   color: yellow;
   border: black 2px solid;
+  margin: 20px 20px;
+  padding: 20px;
+}
+
+.question {
+  margin: 20px 20px;
 }

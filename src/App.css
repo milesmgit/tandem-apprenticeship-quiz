@@ -276,3 +276,6 @@ button {
     box-shadow: 3px 3px 3px black;
   }
 }
+nav {
+  margin: 10px;
+}

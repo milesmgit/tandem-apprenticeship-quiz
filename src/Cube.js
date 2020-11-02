@@ -23,6 +23,7 @@ class Cube extends Component {
     this.colorClicked = null;
     this.myClick = this.myClick.bind(this);
     this.checkAnswer = this.checkAnswer.bind(this);
+    this.noAnswer = this.noAnswer.bind(this);
     this.startTimer = this.startTimer.bind(this);
     this.reset = this.reset.bind(this);
   }
@@ -56,6 +57,7 @@ class Cube extends Component {
         });
       } else {
         clearInterval(this.timer);
+        this.noAnswer();
         if (this.counter < Question.questions.length - 1) {
           this.counter += 1;
           this.setState({
@@ -66,7 +68,6 @@ class Cube extends Component {
             currentAnswerChoiceRed: Question.questions[this.counter].red,
             timerTime: 35,
           });
-
           this.startTimer();
         } else if (
           this.counter === Question.questions.length - 1 &&
@@ -94,9 +95,10 @@ class Cube extends Component {
   checkAnswer() {
     let renderAnswer = Question.questions[this.counter].correct;
     const displayAnswer = document.getElementById("display");
-    displayAnswer.innerHTML = `Question ${this.counter + 1}'s answer is ${
-      Question.questions[this.counter].correct
-    } - 
+    let questionNumber = this.counter;
+    questionNumber = questionNumber + 1;
+    displayAnswer.innerHTML = `Question ${questionNumber}: 
+    ${Question.questions[this.counter].question} - Correct Answer - 
       ${Question.questions[this.counter][renderAnswer]}
     `;
     if (this.counter < Question.questions.length) {
@@ -136,6 +138,16 @@ class Cube extends Component {
       }
       console.log("counter " + this.counter);
     }
+  }
+
+  noAnswer() {
+    let renderAnswer = Question.questions[this.counter].correct;
+    const displayAnswer = document.getElementById("display");
+    let questionNumber = this.counter + 1;
+    displayAnswer.innerHTML = `Question ${questionNumber}: 
+    ${Question.questions[this.counter].question} - Correct Answer - 
+      ${Question.questions[this.counter][renderAnswer]}
+    `;
   }
 
   render() {

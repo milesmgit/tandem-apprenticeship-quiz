@@ -18,7 +18,7 @@ For me, I have two folders named tandem_apprenticeship_quiz, so I cd into both..
 'cd tandem_apprenticeship_quiz/tandem_apprenticeship_quiz'
 Type 'npm start'
 
-# I am working on media queries at present
+# I am working on media queries at present: I am going to sleep now - my next goal is to make the cube appear as scalable to mobile phones.
 
 # Getting Started with Create React App
 

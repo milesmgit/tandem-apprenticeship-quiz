@@ -23,8 +23,8 @@ class Cube extends Component {
     this.colorClicked = null;
     this.myClick = this.myClick.bind(this);
     this.checkAnswer = this.checkAnswer.bind(this);
-    this.noAnswer = this.noAnswer.bind(this);
     this.startTimer = this.startTimer.bind(this);
+    this.delay = this.delay.bind(this);
     this.reset = this.reset.bind(this);
   }
 
@@ -57,9 +57,8 @@ class Cube extends Component {
         });
       } else {
         clearInterval(this.timer);
-        this.noAnswer();
+        this.checkAnswer();
         if (this.counter < Question.questions.length - 1) {
-          this.counter += 1;
           this.setState({
             currentQuestion: Question.questions[this.counter],
             currentAnswerChoiceBlue: Question.questions[this.counter].blue,
@@ -89,10 +88,24 @@ class Cube extends Component {
 
     this.colorClicked = e.target.id;
   }
+
+  delay() {
+    this.interval = setInterval(() => {
+      if (this.right === Question.questions.length) {
+        this.setState({ view: 1 });
+      } else {
+        this.setState({ view: 2 });
+      }
+    }, 10000);
+  }
+
   // I am using bracket notation for this bit ${Question.questions[this.counter][renderAnswer]}
   // so that I can access an object via a string input.
 
   checkAnswer() {
+    if (this.counter > Question.questions.length - 1) {
+      return;
+    }
     let renderAnswer = Question.questions[this.counter].correct;
     const displayAnswer = document.getElementById("display");
     let questionNumber = this.counter;
@@ -131,26 +144,9 @@ class Cube extends Component {
           timerTime: 0,
         });
 
-        if (this.right === Question.questions.length) {
-          this.setState({ view: 1 });
-        } else {
-          this.setState({ view: 2 });
-        }
+        this.delay();
       }
       console.log("counter " + this.counter);
-    }
-  }
-
-  noAnswer() {
-    if (this.counter < Question.questions.length) {
-      let renderAnswer = Question.questions[this.counter].correct;
-      const displayAnswer = document.getElementById("display");
-      let questionNumber = this.counter + 1;
-
-      displayAnswer.innerHTML = `Question ${questionNumber}: 
-    ${Question.questions[this.counter].question} - Correct Answer - 
-      ${Question.questions[this.counter][renderAnswer]}
-    `;
     }
   }
 

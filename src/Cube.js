@@ -71,7 +71,7 @@ class Cube extends Component {
           this.startTimer();
         } else if (
           this.counter === Question.questions.length - 1 &&
-          this.right !== 10
+          this.right !== Question.questions.length
         ) {
           this.setState({
             timerTime: 0,
@@ -130,6 +130,7 @@ class Cube extends Component {
             Question.questions[Question.questions.length - 1].red,
           timerTime: 0,
         });
+
         if (this.right === Question.questions.length) {
           this.setState({ view: 1 });
         } else {

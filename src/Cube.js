@@ -141,13 +141,16 @@ class Cube extends Component {
   }
 
   noAnswer() {
-    let renderAnswer = Question.questions[this.counter].correct;
-    const displayAnswer = document.getElementById("display");
-    let questionNumber = this.counter + 1;
-    displayAnswer.innerHTML = `Question ${questionNumber}: 
+    if (this.counter < Question.questions.length) {
+      let renderAnswer = Question.questions[this.counter].correct;
+      const displayAnswer = document.getElementById("display");
+      let questionNumber = this.counter + 1;
+
+      displayAnswer.innerHTML = `Question ${questionNumber}: 
     ${Question.questions[this.counter].question} - Correct Answer - 
       ${Question.questions[this.counter][renderAnswer]}
     `;
+    }
   }
 
   render() {

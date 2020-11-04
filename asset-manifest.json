@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tandem-apprenticeship-quiz/static/css/main.79932896.chunk.css",
+    "main.js": "/tandem-apprenticeship-quiz/static/js/main.7ca26be8.chunk.js",
+    "main.js.map": "/tandem-apprenticeship-quiz/static/js/main.7ca26be8.chunk.js.map",
+    "runtime-main.js": "/tandem-apprenticeship-quiz/static/js/runtime-main.62fa0e39.js",
+    "runtime-main.js.map": "/tandem-apprenticeship-quiz/static/js/runtime-main.62fa0e39.js.map",
+    "static/css/2.95f25948.chunk.css": "/tandem-apprenticeship-quiz/static/css/2.95f25948.chunk.css",
+    "static/js/2.a9591a22.chunk.js": "/tandem-apprenticeship-quiz/static/js/2.a9591a22.chunk.js",
+    "static/js/2.a9591a22.chunk.js.map": "/tandem-apprenticeship-quiz/static/js/2.a9591a22.chunk.js.map",
+    "index.html": "/tandem-apprenticeship-quiz/index.html",
+    "static/css/2.95f25948.chunk.css.map": "/tandem-apprenticeship-quiz/static/css/2.95f25948.chunk.css.map",
+    "static/css/main.79932896.chunk.css.map": "/tandem-apprenticeship-quiz/static/css/main.79932896.chunk.css.map",
+    "static/js/2.a9591a22.chunk.js.LICENSE.txt": "/tandem-apprenticeship-quiz/static/js/2.a9591a22.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62fa0e39.js",
+    "static/css/2.95f25948.chunk.css",
+    "static/js/2.a9591a22.chunk.js",
+    "static/css/main.79932896.chunk.css",
+    "static/js/main.7ca26be8.chunk.js"
+  ]
+}

@@ -1,10 +1,10 @@
 # To see working project without having to clone, download or configure anything - visit https://milesmgit.github.io/tandem-apprenticeship-quiz/
 
-# To run this program:
+# To run this program from your local machine:
 
 # 1) Clone the github repository online into a directory on your local machine of your choosing.
 
-Example - using terminal type 'mkdir nameOfYourDirectory'
+Example - using terminal type 'mkdir nameOfYourDirectory' [ENTER]
 
 # 2) cd into that directory and type 'git clone https://github.com/milesmgit/tandem-apprenticeship-quiz'
 

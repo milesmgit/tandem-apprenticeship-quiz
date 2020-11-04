@@ -18,7 +18,7 @@ For me, I have two folders named tandem_apprenticeship_quiz, so I cd into both..
 'cd tandem_apprenticeship_quiz/tandem_apprenticeship_quiz'
 Type 'npm start'
 
-# Next goal: media queries and a reset funtion. At the moment, please close out the current browser tab and then return to github and load the gh-pages link.
+# Next goal: media queries
 
 # Getting Started with Create React App
 

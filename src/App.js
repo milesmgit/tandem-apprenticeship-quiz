@@ -23,7 +23,7 @@ class App extends Component {
       <Router>
         {/* place link tags inside the Router Tags */}
         <nav>
-          <Link to="/">Play Noobx Cube</Link>
+          <Link to="/tandem-apprenticeship-quiz/">Play Noobx Cube</Link>
           <Link to="/trending">Trending</Link>
           <Link to="/instructions">Instructions</Link>
         </nav>
@@ -31,7 +31,7 @@ class App extends Component {
         <div>
           <Route path="/trending" component={Trending} />
           {/* <Route exact path="/" component={ () =>  <Cube />} /> */}
-          <Route exact path="/" component={Cube} />
+          <Route exact path="/tandem-apprenticeship-quiz/" component={Cube} />
           <Route path="/instructions" component={Instructions} />
         </div>
       </Router>

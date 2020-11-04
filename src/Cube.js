@@ -27,7 +27,7 @@ class Cube extends Component {
     this.delay = this.delay.bind(this);
     this.reset = this.reset.bind(this);
   }
-
+  // I am having difficulty resetting this react script.  Next goal...
   reset() {
     this.setState({
       view: -1,

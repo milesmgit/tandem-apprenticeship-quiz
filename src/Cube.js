@@ -27,21 +27,10 @@ class Cube extends Component {
     this.delay = this.delay.bind(this);
     this.reset = this.reset.bind(this);
   }
-  // I am having difficulty resetting this react script.  Next goal...
-  reset() {
-    this.setState({
-      view: -1,
-      timerTime: 35,
-      colorClicked: null,
-      currentQuestion: Question.questions[0],
-      currentAnswerChoiceBlue: Question.questions[0].blue,
-      currentAnswerChoiceOrange: Question.questions[0].orange,
-      currentAnswerChoiceYellow: Question.questions[0].yellow,
-      currentAnswerChoiceRed: Question.questions[0].red,
-    });
-    this.counter = 0;
-    this.right = 0;
-  }
+
+  reset = () => {
+    window.location.reload(true);
+  };
 
   startTimer = () => {
     this.setState({
@@ -106,47 +95,52 @@ class Cube extends Component {
     if (this.counter > Question.questions.length - 1) {
       return;
     }
-    let renderAnswer = Question.questions[this.counter].correct;
-    const displayAnswer = document.getElementById("display");
-    let questionNumber = this.counter;
-    questionNumber = questionNumber + 1;
-    displayAnswer.innerHTML = `Question ${questionNumber}: 
+    if (
+      Question.questions[this.counter] !== null &&
+      Question.questions[this.counter] !== undefined
+    ) {
+      let renderAnswer = Question.questions[this.counter].correct;
+      const displayAnswer = document.getElementById("display");
+      let questionNumber = this.counter;
+      questionNumber = questionNumber + 1;
+      displayAnswer.innerHTML = `Question ${questionNumber}: 
     ${Question.questions[this.counter].question} - Correct Answer - 
       ${Question.questions[this.counter][renderAnswer]}
     `;
-    if (this.counter < Question.questions.length) {
-      this.counter += 1;
-      if (this.colorClicked === this.state.currentQuestion.correct) {
-        this.right += 1;
-        console.log("right " + this.right);
-      }
-
       if (this.counter < Question.questions.length) {
-        this.setState({
-          currentQuestion: Question.questions[this.counter],
-          currentAnswerChoiceBlue: Question.questions[this.counter].blue,
-          currentAnswerChoiceOrange: Question.questions[this.counter].orange,
-          currentAnswerChoiceYellow: Question.questions[this.counter].yellow,
-          currentAnswerChoiceRed: Question.questions[this.counter].red,
-          timerTime: 35,
-        });
-      } else if (this.counter === Question.questions.length) {
-        this.setState({
-          currentQuestion: Question.questions[Question.questions.length - 1],
-          currentAnswerChoiceBlue:
-            Question.questions[Question.questions.length - 1].blue,
-          currentAnswerChoiceOrange:
-            Question.questions[Question.questions.length - 1].orange,
-          currentAnswerChoiceYellow:
-            Question.questions[Question.questions.length - 1].yellow,
-          currentAnswerChoiceRed:
-            Question.questions[Question.questions.length - 1].red,
-          timerTime: 0,
-        });
+        this.counter += 1;
+        if (this.colorClicked === this.state.currentQuestion.correct) {
+          this.right += 1;
+          console.log("right " + this.right);
+        }
 
-        this.delay();
+        if (this.counter < Question.questions.length) {
+          this.setState({
+            currentQuestion: Question.questions[this.counter],
+            currentAnswerChoiceBlue: Question.questions[this.counter].blue,
+            currentAnswerChoiceOrange: Question.questions[this.counter].orange,
+            currentAnswerChoiceYellow: Question.questions[this.counter].yellow,
+            currentAnswerChoiceRed: Question.questions[this.counter].red,
+            timerTime: 35,
+          });
+        } else if (this.counter === Question.questions.length) {
+          this.setState({
+            currentQuestion: Question.questions[Question.questions.length - 1],
+            currentAnswerChoiceBlue:
+              Question.questions[Question.questions.length - 1].blue,
+            currentAnswerChoiceOrange:
+              Question.questions[Question.questions.length - 1].orange,
+            currentAnswerChoiceYellow:
+              Question.questions[Question.questions.length - 1].yellow,
+            currentAnswerChoiceRed:
+              Question.questions[Question.questions.length - 1].red,
+            timerTime: 0,
+          });
+
+          this.delay();
+        }
+        console.log("counter " + this.counter);
       }
-      console.log("counter " + this.counter);
     }
   }
 
